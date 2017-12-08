@@ -1,0 +1,37 @@
+{
+  "name": "Filmesjavistos",
+  "homepage": "https://github.com/suellencarvalho/projetofinal",
+  "authors": [
+    "Suellen Carvalho <34286806+suellencarvalho@users.noreply.github.com>"
+  ],
+  "description": "Listagem de filmes já assistidos",
+  "main": "",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  " dependências " : {
+    " angular " : " ^ 1.6.7 " ,
+    " bootstrap " : " 3.3.7 " ,
+    " cookies angulares " : " ^ 1.6.7 " ,
+    " angular-sanitize " : " ^ 1.6.7 " ,
+    " angular-ui-router " : " 1.0.6 " ,
+    " toque angular " : " ^ 1.6.7 " ,
+    " angular-animate " : " ^ 1.6.7 " ,
+    " angular-aria " : " ^ 1.6.7 " ,
+    " mensagens angulares " : " ^ 1.6.7 " ,
+    " font-awesome " : " 4.7.0 " ,
+    " satellizer " : " 0.15.5 " ,
+    " modernizr " : " 3.5.0 " ,
+    " ngstorage " : " ^ 0.3.11 " ,
+    " mesa angular inteligente " : " ^ 2.1.9 "
+  },
+  " resoluções " : {
+    " bootstrap " : " > = 3.3.7 " ,
+    " angular " : " > = 1,6.7 "
+  }
+}
