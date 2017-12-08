@@ -1,0 +1,53 @@
+<div  class = " page-header " >
+<h1  ng-bind-html = " vm.pageTitle " > </h1 >
+</div >
+
+
+<div  class = " row " >
+<div  class = " col-lg-8 " > </div >
+<div  class = " col-lg-4 " >
+    <A  class = " btn btn-sucesso pull-direita "  ui-Sref = " main.todo-criar " >
+        <!--Crio-->
+        <span  class = " glyphicon glyphicon-plus " > </span >
+    </a >
+</div >
+</div >
+<table  class = " table table-striped table-hover " >
+<thead >
+    <tr >
+        <th > ID </th >
+        <th > NAME </th >
+        <th > EMAIL </th >
+        <th > CPF </th >
+        <th > RG </th >
+        <th > QTD FILHOS </th >
+        <th > ACTION </th >
+    </tr >
+</thead >
+<tbody >
+    <tr  ng-repeat = " item em vm.users " >
+        <td  ng-bind = " item.id " > </td >
+        <td  ng-bind = " item.name " > </td >
+        <td  ng-bind = " item.email " > </td >
+        <td  ng-bind = " item.cpf " > </td >
+        <td  ng-bind = " item.rg " > </td >
+        <td  ng-bind = " item.qtdChildrens " > </td >
+        <td >               
+            <!--Chamando uma url com paramatro. Obs .:
+                    Olhen o router eo controlador que tem o $ stateParam,
+                    Pois é um jeito que passa parametros pela url.
+            -->
+            <A  class = " btn btn-info "  ui-Sref = " main.todo-update ({id: item.id}) " >
+                <!--Atualizar-->
+                <span  class = " glyphicon glyphicon-pencil " > </span >
+            </a >
+            <!-- Chamando a funcao do ctrl -->
+            <button  type = " button "  class = " btn btn-danger "  ng-click = " vm.deleteUserApi (item); " >
+                <!--Excluir-->
+                <span  class = " glyphicon glyphicon-trash " > </span >
+            </button >
+        </td >
+    </tr >
+</tbody >
+</table >
+
