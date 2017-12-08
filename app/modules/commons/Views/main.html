@@ -1,7 +1,8 @@
 
 <nav  class = " navbar navbar-default navbar-fixed-top "  role = " navigation " >
+    
 <!-- Marca e alternar agrupados para melhor exibição móvel -->
-< div  class = " navbar-header " >
+<div  class = " navbar-header " >
     <button  type = " button "  class = " navbar-toggle "  data-toggle = " colapsar "  dados-target = " .navbar-ex1-collapse " >
         <span  class = " sr-only " > Toggle navigation </span >
         <span  class = " icon-bar " > </span >
@@ -18,15 +19,46 @@
             <Uma  ui-Sref = " main.dashboard " > Painel </a >
         </li >
         <li  ui-sref-active = " ativo " >
-            <Uma  ui-Sref = " main.todo " > Todo </a >
+            <Uma  ui-Sref = " main.filmes " > Filmes </a >
         </li >
     </ul >
-    <form  class = " navbar-form navbar-left "  role = " search " >
-        <div  class = " form-group " >
-            <input  type = " text "  class = " form-control "  placeholder = " Search " >
-        </div >
-        <button  type = " submit "  class = " btn btn-default " > Enviar </button >
-    </form >
+
+    <h1>{{ titulo }}</h1>
+    
+            <div class="lista-filmes">
+                <div aw-filme="f" fn-fechar="removerFilme(f.id)" ng-repeat="f in filmes"></div>
+            </div>
+            
+    <!--formulario-->
+    <form name="formulario" class="form-filmes" ng-submit="criarFilme()">
+        <h1>Adicionar Filme</h1>
+        <div class="form-campo">
+            <label for="titulo">Título</label>
+            <input type="text" id="titulo" name="titulo" ng-model="novoFilme.titulo">
+        </div>
+        <div class="form-campo pequeno">
+            <label for="ano">Ano de Lançamento</label>
+            <input type="number" id="ano" name="ano" ng-model="novoFilme.ano">
+        </div>
+        <div class="form-campo medio">
+            <label for="produtora">Produtora</label>
+            <input type="text" id="produtora" name="produtora" ng-model="novoFilme.produtora">
+        </div>
+        <div class="form-campo">
+            <label for="cartaz">Url do Cartaz</label>
+            <input type="text" id="cartaz" name="cartaz" ng-model="novoFilme.cartaz">
+        </div>
+        <div class="form-campo">
+            <label for="sinopse">Sinópse</label>
+            <textarea id="sinopse" name="sinopse" ng-model="novoFilme.sinopse" rows="5"></textarea>
+        </div>
+
+        <footer>
+            <button type="reset">Limpar</button>
+            <button type="submit">Salvar</button>
+        </footer>
+    </form>
+</div>
     <ul  class = " nav navbar-nav navbar-right " >
         <Li > <a  href = " # " > link </a > </li >
         <li  class = " dropdown " >
