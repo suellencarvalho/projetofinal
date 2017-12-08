@@ -1,4 +1,4 @@
-angular . módulo ( " filmesApp " , [
+angular . módulo ( "filmes" , [
     ' ui.router ' ,
     ' Satellizer ' ,
     ' ngAnimate ' ,

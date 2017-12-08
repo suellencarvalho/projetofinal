@@ -2,10 +2,10 @@
 
 
 
-(function(){  angular.module('filmesApp')
+(function(){  angular.module("filmes")
     .controller('FilmesController', function(vm, MeusFilmes) {
     var vm = this;
-      vm.titulo = "Filmes que jรก assisti";
+      vm.titulo = "Filmes que já assisti";
   
       vm.filmes = [];
   

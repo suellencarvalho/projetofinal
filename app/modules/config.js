@@ -6,4 +6,4 @@ função  executada ( $ rootScope , $ state , $ location ) {
     // });
 }
 
-angular . módulo ( ' todoApp ' ). executar (executar);
+angular . módulo ( "filmes" ). executar (executar);

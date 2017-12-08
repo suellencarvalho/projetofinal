@@ -27,17 +27,8 @@ function config($stateProvider, $httpProvider, $urlRouterProvider) {
                 url: 'filmes',
                 controller: 'FilmesCtrl as vm',
                 templateUrl: 'modules/filmes/views/filmes.html'
-            })
-            .state('main.todo-create', {
-                url: 'todo/create',
-                controller: 'TodoCreateCtrl as vm',
-                templateUrl: 'modules/todo/views/todo.create.html'
-            })
-            .state('main.todo-update', {
-                url: 'todo/update/:id',
-                controller: 'TodoUpdateCtrl as vm',
-                templateUrl: 'modules/todo/views/todo.update.html'
+           
             });
     }
     
-    angular.module('todoApp').config(config);
+    angular.module("filmes").config(config);
