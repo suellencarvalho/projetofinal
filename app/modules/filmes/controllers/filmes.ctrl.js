@@ -1,26 +1,26 @@
-função  FilmesCtrl ( FilmesService , FilmesFactory ) {
-    var vm =  this ;
-    vm . pageTitle  =  ' Filmes <small> list </ small> ' ;   
-    vm . users  = {};
+function  FilmesCtrl ( FilmesService , FilmesFactory ) {
+    var vm =  this;
+    vm.pageTitle  =  ' Filmes <small> list </ small> ' ;   
+    vm.users  = {};
 
-    vm . deleteUserApi  = _deleteUserApi;
+    vm.deleteUserApi  = _deleteUserApi;
 
     _init ();
 
     function  _init () {
-        FilmesService . getApiList (). então (_apiSuccess, _apiError);
+        FilmesService.getApiList().then(_apiSuccess, _apiError);
     }
 
-    função  _apiSuccess ( response ) {
-        vm . usuários  =  FilmesFactory . getApiToView (resposta);
+    function  _apiSuccess(response) {
+        vm.usuários  =  FilmesFactory.getApiToView(resposta);
     }
 
-    função  _apiError ( erro ) {
+    function _apiError (erro) {
         
     }
 
-    função  _deleteUserApi ( item ) {
-        FilmesService . deleteUserApi ( item . id ). então ( função ( resposta ) {
+    function  _deleteUserApi (item) {
+        FilmesService.deleteUserApi ( item . id ).then ( function ( resposta ) {
             // Pega o parametro para escolher uma linha que vai remover da view
             // Por isso só esta parte nao estar com um método anônimo
             _deleteSuccess (item);
@@ -28,11 +28,10 @@ função  FilmesCtrl ( FilmesService , FilmesFactory ) {
     }
 
     function  _deleteSuccess ( item ) {
-        var index =  vm . usuários . indexOf (item);
-        vm . usuários . emenda (índice, 1 );
+        var index =  vm.usuários.indexOf (item);
+        vm.usuários.splice (índice, 1 );
     }
 
 }
 
-angular . módulo ( "filmes" )
-    . controlador ( ' FilmesCtrl ' , FilmesCtrl);
+angular.module( "filmes" ).controller ( ' FilmesCtrl ' , FilmesCtrl);
