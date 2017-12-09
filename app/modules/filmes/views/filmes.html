@@ -6,7 +6,7 @@
 <div  class = " row " >
 <div  class = " col-lg-8 " > </div >
 <div  class = " col-lg-4 " >
-    <A  class = " btn btn-sucesso pull-direita "  ui-Sref = " main.todo-criar " >
+    <A  class = " btn btn-sucesso pull-direita "  ui-Sref = " main.filmes-criar " >
         <!--Crio-->
         <span  class = " glyphicon glyphicon-plus " > </span >
     </a >
@@ -26,18 +26,18 @@
 </thead >
 <tbody >
     <tr  ng-repeat = " item em vm.users " >
-        <td  ng-bind = " item.id " > </td >
-        <td  ng-bind = " item.name " > </td >
-        <td  ng-bind = " item.email " > </td >
-        <td  ng-bind = " item.cpf " > </td >
-        <td  ng-bind = " item.rg " > </td >
-        <td  ng-bind = " item.qtdChildrens " > </td >
+        <td  ng-bind = " item.titulo" > </td >
+        <td  ng-bind = " item.ano " > </td >
+        <td  ng-bind = " item.produtora " > </td >
+        <td  ng-bind = " item.cartaz" > </td >
+        <td  ng-bind = " item.sinopse" > </td >
+     
         <td >               
             <!--Chamando uma url com paramatro. Obs .:
                     Olhen o router eo controlador que tem o $ stateParam,
                     Pois é um jeito que passa parametros pela url.
             -->
-            <A  class = " btn btn-info "  ui-Sref = " main.todo-update ({id: item.id}) " >
+            <A  class = " btn btn-info "  ui-Sref = " main.filmes-update ({id: item.id}) " >
                 <!--Atualizar-->
                 <span  class = " glyphicon glyphicon-pencil " > </span >
             </a >
