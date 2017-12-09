@@ -1,6 +1,6 @@
 function FilmesCreateCtrl( $state, FilmesService, FilmesFactory ) {
     var vm = this;
-    vm.pageTitle = 'Filmes <small>Create</small>';   
+    vm.pageTitle = 'Filmes <small>Inserir</small>';   
     vm.user = { };
     vm.createUser = _createUser;
 
@@ -26,5 +26,4 @@ function FilmesCreateCtrl( $state, FilmesService, FilmesFactory ) {
 
 }
 
-angular.module("filmes")
-    .controller('FilmesCreateCtrl', FilmesCreateCtrl);
+angular.module("filmes").controller('FilmesCreateCtrl', FilmesCreateCtrl);
