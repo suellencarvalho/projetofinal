@@ -15,12 +15,11 @@
 <table  class = " table table-striped table-hover " >
 <thead >
     <tr >
-        <th > ID </th >
-        <th > NAME </th >
-        <th > EMAIL </th >
-        <th > CPF </th >
-        <th > RG </th >
-        <th > QTD FILHOS </th >
+        <th > TITULO </th >
+        <th > ANO </th >
+        <th > PRODUTORA </th >
+        <th > CARTAZ </th >
+        <th > SINOPSE</th >
         <th > ACTION </th >
     </tr >
 </thead >
@@ -37,7 +36,7 @@
                     Olhen o router eo controlador que tem o $ stateParam,
                     Pois é um jeito que passa parametros pela url.
             -->
-            <A  class = " btn btn-info "  ui-Sref = " main.filmes-update ({id: item.id}) " >
+            <A  class = " btn btn-info "  ui-Sref = " main.filmes-update ({id: item.titulo}) " >
                 <!--Atualizar-->
                 <span  class = " glyphicon glyphicon-pencil " > </span >
             </a >
